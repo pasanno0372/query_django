@@ -1,0 +1,364 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+{#    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">#}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <title>Hello, world!</title>
+    <style>
+    img {
+      display: block;
+      /* margin-left: 50px; */
+      margin-top: 5px;
+      /* margin-right: auto; */
+      height: 100px;
+      width: 100px;
+    }
+    img#logo{
+      width: 30px;
+      height: 30px;
+    }
+    body{
+      /* background-image: url("img/light-blue-5.jpg"); */
+    }
+</style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="{% static 'img/bootstrap-solid.svg' %}" width="30" height="30" class="d-inline-block align-top" alt="" id="logo">
+    Shopping
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../mouse">Mouse</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="../keyboard/">Keyboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="../etc">Etc</a>
+      </li>
+
+        {% for category in product.category_set.all %}
+            <a href="">aaaaa</a>
+            <li>{{ category.name }}</li>
+        {% endfor %}
+
+
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="img/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="" id="logo">
+    Shopping
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Mouse</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Keyboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#">CPU</a>
+      </li>
+    </ul>
+
+    <form class="form-inline mr-sm-0  ">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+  </form>
+  </div>
+</nav> -->
+    <!-- <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="img/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="" id="logo">
+        Shopping
+      </a>
+
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Mouse</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Keyboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CPU</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Etc.</a>
+        </li>
+      </ul>
+    </nav> -->
+<div class="container">
+  <!-- Content here -->
+  <!-- Image and text -->
+
+      <!-- <h1>Hello, world!</h1> -->
+
+{#    {% for a in products %}#}
+{##}
+{#        {{ a.name }} {{ a.description }}#}
+{##}
+{#    {% endfor %}#}
+    <div></div>
+
+
+<center>
+  <div class="row align-items-start "><!-- COMBAK: slot1 -->
+    <div class="col"><!-- COMBAK: col in slot 1-1 -->
+
+      <div class="row"><!-- COMBAK: row in slot1-1 on -->
+        <div class="col">
+
+            <img src="{% static 'img/b1.png' %}" alt="" width="50" height="50">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>MI (สายรัดข้อมืออัจฉริยะ) BAND 2 GLOBAL [13713] MGW4024GL</p>
+          <p>890 บาท</p>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-danger">สั่งซื้อ</button>
+        </div>
+
+      </div><!-- COMBAK: end row in slot1-1 on -->
+
+    </div><!-- COMBAK: end col in slot 1-1 -->
+    <div class="col">
+      <div class="row"><!-- COMBAK: row in slot1-2 on -->
+        <div class="col">
+          <img src="{% static 'img/k1.jpg' %}" alt="" width="50" height="50">
+
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col">
+        <p>KEYBOARD (คีย์บอร์ด) RAZER ORNATA CHROMA [ENG]</p>
+        <p>2,990 บาท</p>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-danger">สั่งซื้อ</button>
+
+      </div>
+
+      </div>
+    </div><!-- COMBAK: end row in slot1-2 on -->
+    <div class="col">
+      <div class="row">
+        <div class="col">
+          <img src="{% static 'img/m1.png' %}" alt="" width="50" height="50">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <p>MOUSE (เม้าส์) LOGITECH OPTICAL USB M100R (BLACK)</p>
+          <p>210 บาท</p>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-danger">สั่งซื้อ</button>
+        </div>
+
+      </div><!-- COMBAK: end row in slot1-3 on -->
+    </div>
+  </div><!-- COMBAK: end slot1 -->
+  <hr><!-- COMBAK: 1515 -->
+
+<div class="row align-items-start "><!-- COMBAK: slot2 -->
+  <div class="col"><!-- COMBAK: col in slot 2-1 -->
+    <div class="row"><!-- COMBAK: row in slot2-1 on -->
+      <div class="col">
+        <img src="{% static 'img/m2.jpg' %}" alt="" width="50" height="50">
+
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <p>MOUSE (เม้าส์) STEELSERIES RIVAL 600 </p>
+        <p>3,290 บาท</p>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-danger">สั่งซื้อ</button>
+      </div>
+
+    </div><!-- COMBAK: end row in slot2-1 on -->
+
+  </div><!-- COMBAK: end col in slot 2-1 -->
+  <div class="col">
+    <div class="row"><!-- COMBAK: row in slot2-2 on -->
+      <div class="col">
+        <img src="{% static 'img/mo1.jpg' %}" alt="" width="50" height="50">
+
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <p>LED MONITOR (จอมอนิเตอร์) SAMSUNG 24" LS24F350FHEXXT</p>
+        <p>4,390 บาท</p>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-danger">สั่งซื้อ</button>
+
+    </div>
+
+    </div>
+  </div><!-- COMBAK: end row in slot2-2 on -->
+  <div class="col">
+    <div class="row">
+      <div class="col">
+        <img src="{% static 'img/mo2.jpg' %}" alt="" width="50" height="50">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <p>LED MONITOR (จอมอนิเตอร์) LG 27" IPS 27MP58VQ-P</p>
+        <p>6,590 บาท</p>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-danger">สั่งซื้อ</button>
+      </div>
+
+    </div><!-- COMBAK: end row in slot2-3 on -->
+  </div>
+</div><!-- COMBAK: end slot2 -->
+<hr><!-- COMBAK: 56464 -->
+
+<div class="row align-items-start "><!-- COMBAK: slot1 -->
+  <div class="col"><!-- COMBAK: col in slot 1-1 -->
+    <div class="row"><!-- COMBAK: row in slot1-1 on -->
+      <div class="col">
+        <img src="{% static  'img/ph1.jpg' %}" alt="" width="50" height="50">
+
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <p>SMARTPHONE (สมาร์ทโฟน) OPPO F7 (SILVER)</p>
+        <p>10,990 บาท</p>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-danger">สั่งซื้อ</button>
+      </div>
+
+    </div><!-- COMBAK: end row in slot3-1 on -->
+
+  </div><!-- COMBAK: end col in slot 3-1 -->
+  <div class="col">
+    <div class="row"><!-- COMBAK: row in slot3-2 on -->
+      <div class="col">
+        <img src="{% static 'img/s1.jpg' %}" alt="" width="50" height="50">
+
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <p>SOFTWARE (ไมโครซอฟท์ วินโดวส์ เซิร์ฟเวอร์)</p>
+        <p>24,990 บาท</p>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-danger">สั่งซื้อ</button>
+
+    </div>
+
+    </div>
+  </div><!-- COMBAK: end row in slot3-2 on -->
+  <div class="col">
+    <div class="row">
+      <div class="col">
+        <img src="{% static 'img/c1.jpg' %}" alt="" width="50" height="50">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <p>CPU (ซีพียู) INTEL 1151 CORE I5-8500 </p>
+        <p>CORES : 6 THREADS : 6</p>
+        <p>7,290 บาท</p>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-danger">สั่งซื้อ</button>
+      </div>
+
+    </div><!-- COMBAK: end row in slot3-3 on -->
+  </div>
+</div><!-- COMBAK: end slot3 -->
+
+
+</center>
+</div><!-- COMBAK: container -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  </body>
+</html>
+{#    <img src="{% static 'css/imgback.jpg' %}"/>#}
